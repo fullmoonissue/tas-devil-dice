@@ -4,7 +4,7 @@ The first bricks of this tas had been retrieved from the [tas-scaffolding projec
 
 ## Publication
 
-* _link provided soon_
+* https://www.youtube.com/watch?v=kPTkihZGlrY
 * Obsolete : https://www.youtube.com/watch?v=-jrqdQf3Jho
 
 ## Emulator used
