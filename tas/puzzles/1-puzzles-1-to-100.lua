@@ -6,7 +6,10 @@ local cf
 local input = Input()
 local macroTricks = MacroTricks(Macro(input))
 
+local fbegin
+
 -- Puzzle 1
+fbegin = 2260
 cf = input:cross(2260)
 cf = input:down(cf + 60, 9)
 cf = input:left(cf, 9)
@@ -15,16 +18,20 @@ cf = input:down(cf + 1, 19)
 cf = input:right(cf + 1)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 1 : ' .. (cf - fbegin))
 
 -- Puzzle 2
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf, 9)
 cf = input:down(cf + 45)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 2 : ' .. (cf - fbegin))
 
 -- Puzzle 3
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf, 9)
@@ -32,8 +39,10 @@ cf = input:down(cf + 45)
 cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 3 : ' .. (cf - fbegin))
 
 -- Puzzle 4
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -43,15 +52,19 @@ cf = macroTricks:downLeft(cf + 1, 38)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 4 : ' .. (cf - fbegin))
 
 -- Puzzle 5
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:right(cf + 53)
 cf = input:right(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 5 : ' .. (cf - fbegin))
 
 -- Puzzle 6
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:down(cf, 9)
@@ -61,8 +74,10 @@ cf = macroTricks:upRight(cf + 1, 38)
 cf = input:up(cf + 1)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 6 : ' .. (cf - fbegin))
 
 -- Puzzle 7
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9) -- frame lag (changing the configuration of the start)
 cf = input:up(cf + 53)
@@ -73,8 +88,10 @@ cf = input:left(cf + 1, 2)
 cf = input:down(cf + 1, 21)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 7 : ' .. (cf - fbegin))
 
 -- Puzzle 8
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 10)
 cf = input:right(cf, 9)
@@ -86,8 +103,10 @@ cf = macroTricks:merryGoOn(cf + 1, 50)
 cf = input:right(cf + 1)
 cf = input:up(cf + 1, 18)
 cf = input:cross(cf + 20)
+print('Puzzle 8 : ' .. (cf - fbegin))
 
 -- Puzzle 9
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -98,8 +117,10 @@ cf = input:right(cf, 39)
 cf = input:up(cf + 1, 2)
 cf = input:left(cf + 1, 17)
 cf = input:cross(cf + 20)
+print('Puzzle 9 : ' .. (cf - fbegin))
 
 -- Puzzle 10
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -110,11 +131,13 @@ cf = input:right(cf, 39)
 cf = input:up(cf + 1, 2)
 cf = input:left(cf + 1, 17)
 cf = input:cross(cf + 20)
+print('Puzzle 10 : ' .. (cf - fbegin))
 
 -- Picture 1
 cf = input:cross(cf + 61)
 
 -- Puzzle 11
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:left(cf, 9)
@@ -125,8 +148,10 @@ cf = input:left(cf + 1)
 cf = macroTricks:upLeft(cf + 1, 21)
 cf = input:down(cf + 1, 2)
 cf = input:cross(cf + 20)
+print('Puzzle 11 : ' .. (cf - fbegin))
 
 -- Puzzle 12
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:down(cf, 9)
@@ -140,8 +165,10 @@ cf = input:down(cf + 1, 19)
 cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:cross(cf + 26) -- frame lag (waiting 6 frames)
+print('Puzzle 12 : ' .. (cf - fbegin))
 
 -- Puzzle 13
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -153,8 +180,10 @@ cf = input:down(cf + 1, 20)
 cf = input:right(cf + 1)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 13 : ' .. (cf - fbegin))
 
 -- Puzzle 14
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 11)
 cf = input:left(cf, 9)
@@ -172,8 +201,10 @@ cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:left(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 14 : ' .. (cf - fbegin))
 
 -- Puzzle 15
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -190,8 +221,10 @@ cf = macroTricks:upLeft(cf + 1, 10)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 15 : ' .. (cf - fbegin))
 
 -- Puzzle 16
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 14)
 cf = input:down(cf + 1, 19)
@@ -204,8 +237,10 @@ cf = input:left(cf + 1, 20)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1, 17)
 cf = input:cross(cf + 38)
+print('Puzzle 16 : ' .. (cf - fbegin))
 
 -- Puzzle 17
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 83)
@@ -225,8 +260,10 @@ cf = input:up(cf + 1, 37)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 17 : ' .. (cf - fbegin))
 
 -- Puzzle 18
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upLeft(cf + 60, 13)
 cf = input:left(cf + 1, 20)
@@ -238,8 +275,10 @@ cf = input:left(cf + 1, 17)
 cf = macroTricks:downLeft(cf + 1, 27)
 cf = input:up(cf + 1, 14)
 cf = input:cross(cf + 20)
+print('Puzzle 18 : ' .. (cf - fbegin))
 
 -- Puzzle 19
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf, 9)
@@ -253,8 +292,10 @@ cf = input:down(cf + 15, 4) -- frame lag (waiting 14 frames + one extra frame fo
 cf = input:right(cf + 1)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 19 : ' .. (cf - fbegin))
 
 -- Puzzle 20
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf, 9)
@@ -272,11 +313,13 @@ cf = input:right(cf + 1, 19)
 cf = input:up(cf + 1)
 cf = input:left(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 20 : ' .. (cf - fbegin))
 
 -- Picture 2
 cf = input:cross(cf + 61)
 
 -- Puzzle 21
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upRight(cf + 60, 13)
 cf = input:up(cf + 1, 79)
@@ -293,8 +336,10 @@ cf = input:right(cf + 1, 28)
 cf = macroTricks:downRight(cf + 1, 40)
 cf = input:left(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 21 : ' .. (cf - fbegin))
 
 -- Puzzle 22
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = macroTricks:downRight(cf + 41, 14)
@@ -305,8 +350,10 @@ cf = macroTricks:downLeft(cf + 1, 28)
 cf = input:left(cf + 1, 17)
 cf = input:up(cf + 1, 13)
 cf = input:cross(cf + 24)
+print('Puzzle 22 : ' .. (cf - fbegin))
 
 -- Puzzle 23
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:down(cf, 9)
@@ -323,8 +370,10 @@ cf = input:right(cf + 1, 20)
 cf = input:right(cf + 1, 20)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 23 : ' .. (cf - fbegin))
 
 -- Puzzle 24
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 29)
 cf = input:right(cf, 9)
@@ -339,8 +388,10 @@ cf = input:up(cf + 1, 75)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1, 54)
 cf = input:cross(cf + 20)
+print('Puzzle 24 : ' .. (cf - fbegin))
 
 -- Puzzle 25
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 29)
 cf = input:up(cf, 9)
@@ -353,8 +404,10 @@ cf = input:up(cf + 1, 19)
 cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 25 : ' .. (cf - fbegin))
 
 -- Puzzle 26
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:left(cf, 9)
@@ -367,8 +420,10 @@ cf = input:right(cf + 1, 19)
 cf = input:right(cf + 1, 20)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 26 : ' .. (cf - fbegin))
 
 -- Puzzle 27
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -383,8 +438,10 @@ cf = input:left(cf + 1, 20)
 cf = input:up(cf + 1, 19)
 cf = input:up(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 27 : ' .. (cf - fbegin))
 
 -- Puzzle 28
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 11)
 cf = input:up(cf, 9)
@@ -401,8 +458,10 @@ cf = macroTricks:upRight(cf + 1, 18)
 cf = input:right(cf + 1, 2)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 28 : ' .. (cf - fbegin))
 
 -- Puzzle 29
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf, 9)
@@ -413,8 +472,10 @@ cf = input:right(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 29 : ' .. (cf - fbegin))
 
 -- Puzzle 30
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 11)
 cf = input:up(cf, 9)
@@ -436,11 +497,13 @@ cf = input:left(cf + 1, 20)
 cf = input:down(cf + 1, 21)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 30 : ' .. (cf - fbegin))
 
 -- Picture 3
 cf = input:cross(cf + 70) -- frame lag (waiting 9 frames)
 
 -- Puzzle 31
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf, 9)
@@ -451,8 +514,10 @@ cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 29) -- frame lag (waiting 9 frames)
+print('Puzzle 31 : ' .. (cf - fbegin))
 
 -- Puzzle 32
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:up(cf, 9)
@@ -476,8 +541,10 @@ cf = input:down(cf + 1, 20)
 cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 32 : ' .. (cf - fbegin))
 
 -- Puzzle 33
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 11)
 cf = input:left(cf + 1, 11)
@@ -494,8 +561,10 @@ cf = input:left(cf + 1, 21)
 cf = macroTricks:upRight(cf + 1, 2)
 cf = input:left(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 33 : ' .. (cf - fbegin))
 
 -- Puzzle 34
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 14)
 cf = input:left(cf + 1, 14)
@@ -514,8 +583,10 @@ cf = input:up(cf + 1, 20)
 cf = input:right(cf + 1)
 cf = input:down(cf + 1, 43)
 cf = input:cross(cf + 20)
+print('Puzzle 34 : ' .. (cf - fbegin))
 
 -- Puzzle 35
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 11)
 cf = input:down(cf + 1, 9)
@@ -528,8 +599,10 @@ cf = input:up(cf + 1, 20)
 cf = input:right(cf + 1)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 35 : ' .. (cf - fbegin))
 
 -- Puzzle 36
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:down(cf + 1, 29)
@@ -544,8 +617,10 @@ cf = input:right(cf + 1, 19)
 cf = input:right(cf + 1, 20)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 28) -- frame lag (waiting 8 frames)
+print('Puzzle 36 : ' .. (cf - fbegin))
 
 -- Puzzle 37
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:up(cf + 1, 9)
@@ -562,8 +637,10 @@ cf = input:left(cf + 1, 19)
 cf = macroTricks:upRight(cf + 8, 1) -- frame lag
 cf = input:right(cf + 1, 5)
 cf = input:cross(cf + 20)
+print('Puzzle 37 : ' .. (cf - fbegin))
 
 -- Puzzle 38
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:up(cf + 1, 9)
@@ -584,8 +661,10 @@ cf = input:right(cf + 1, 19)
 cf = input:right(cf + 1, 20)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 38 : ' .. (cf - fbegin))
 
 -- Puzzle 39
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:down(cf + 1, 9)
@@ -606,8 +685,10 @@ cf = macroTricks:downLeft(cf + 1, 10)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 26) -- frame lag (waiting 6 frames)
+print('Puzzle 39 : ' .. (cf - fbegin))
 
 -- Puzzle 40
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -618,11 +699,13 @@ cf = input:left(cf + 1, 19)
 cf = input:down(cf + 1, 19)
 cf = input:down(cf + 1, 20)
 cf = input:cross(cf + 30) -- frame lag (waiting 10 frames)
+print('Puzzle 40 : ' .. (cf - fbegin))
 
 -- Picture 4
 cf = input:cross(cf + 61)
 
 -- Puzzle 41 ; @todo : why the frame lag is not a problem here ?
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -633,8 +716,10 @@ cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 41 : ' .. (cf - fbegin))
 
 -- Puzzle 42
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:down(cf + 1, 9)
@@ -655,8 +740,10 @@ cf = input:down(cf + 1, 21)
 cf = input:left(cf + 1)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 42 : ' .. (cf - fbegin))
 
 -- Puzzle 43
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -668,8 +755,10 @@ cf = input:left(cf + 1, 20)
 cf = input:up(cf + 1, 19)
 cf = input:up(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 43 : ' .. (cf - fbegin))
 
 -- Puzzle 44
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:right(cf + 1, 9)
@@ -685,8 +774,10 @@ cf = input:up(cf + 1, 3)
 cf = input:right(cf + 1)
 cf = input:right(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 44 : ' .. (cf - fbegin))
 
 -- Puzzle 45
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upRight(cf + 60, 10)
 cf = input:right(cf + 1, 22)
@@ -702,8 +793,10 @@ cf = input:up(cf + 1, 34) -- frame lag
 cf = input:left(cf + 1, 3)
 cf = input:down(cf + 1, 43)
 cf = input:cross(cf + 20)
+print('Puzzle 45 : ' .. (cf - fbegin))
 
 -- Puzzle 46
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -721,8 +814,10 @@ cf = input:down(cf + 1, 20)
 cf = input:left(cf + 1)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 46 : ' .. (cf - fbegin))
 
 -- Puzzle 47
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:left(cf + 1, 9)
@@ -742,8 +837,10 @@ cf = macroTricks:downRight(cf + 1, 12)
 cf = input:right(cf + 1, 17)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 47 : ' .. (cf - fbegin))
 
 -- Puzzle 48
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -767,8 +864,10 @@ cf = macroTricks:upLeft(cf + 1, 10)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 48 : ' .. (cf - fbegin))
 
 -- Puzzle 49
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -789,8 +888,10 @@ cf = input:down(cf + 1, 2)
 cf = input:down(cf + 1, 20)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 49 : ' .. (cf - fbegin))
 
 -- Puzzle 50
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf + 1, 29)
@@ -809,11 +910,13 @@ cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:up(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 50 : ' .. (cf - fbegin))
 
 -- Picture 5
 cf = input:cross(cf + 61)
 
 -- Puzzle 51
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:left(cf + 1, 9)
@@ -823,8 +926,10 @@ cf = macroTricks:upDownHesitation(cf + 1, 190)
 cf = input:right(cf + 241)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 24) -- frame lag (waiting 4 frames)
+print('Puzzle 51 : ' .. (cf - fbegin))
 
 -- Puzzle 52
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -843,8 +948,10 @@ cf = input:up(cf + 16, 5) -- frame lag
 cf = input:down(cf + 1)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 52 : ' .. (cf - fbegin))
 
 -- Puzzle 53
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -868,8 +975,10 @@ cf = input:down(cf + 1, 24)
 cf = input:left(cf + 1, 2)
 cf = input:right(cf + 15)
 cf = input:cross(cf + 20)
+print('Puzzle 53 : ' .. (cf - fbegin))
 
 -- Puzzle 54
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upRight(cf + 60, 10)
 cf = input:right(cf + 1, 22)
@@ -887,8 +996,10 @@ cf = input:left(cf + 1, 5)
 cf = input:left(cf + 203)
 cf = input:up(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 54 : ' .. (cf - fbegin))
 
 -- Puzzle 55
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 48)
 cf = input:down(cf + 1, 9)
@@ -919,8 +1030,10 @@ cf = input:right(cf + 1)
 cf = input:right(cf + 1, 18)
 cf = input:down(cf + 8, 14) -- frame lag
 cf = input:cross(cf + 20)
+print('Puzzle 55 : ' .. (cf - fbegin))
 
 -- Puzzle 56
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 12)
 cf = input:up(cf + 1, 3)
@@ -944,8 +1057,10 @@ cf = macroTricks:downRight(cf + 38, 16)
 cf = input:down(cf + 1, 17)
 cf = input:left(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 56 : ' .. (cf - fbegin))
 
 -- Puzzle 57
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf + 1, 9)
@@ -963,8 +1078,10 @@ cf = macroTricks:rightSelect(cf + 1, 2)
 cf = macroTricks:upSelect(cf + 1, 19)
 cf = input:select(cf + 1, 19)
 cf = input:cross(cf + 1)
+print('Puzzle 57 : ' .. (cf - fbegin))
 
 -- Puzzle 58
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -984,8 +1101,10 @@ cf = input:left(cf + 1, 8)
 cf = macroTricks:upLeft(cf + 1, 28)
 cf = input:right(cf + 1, 17)
 cf = input:cross(cf + 20)
+print('Puzzle 58 : ' .. (cf - fbegin))
 
 -- Puzzle 59
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 9)
@@ -1012,8 +1131,10 @@ cf = input:right(cf + 1)
 cf = input:up(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 59 : ' .. (cf - fbegin))
 
 -- Puzzle 60
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upRight(cf + 60, 14)
 cf = input:up(cf + 1, 54)
@@ -1026,11 +1147,13 @@ cf = input:down(cf + 1, 20)
 cf = input:right(cf + 1)
 cf = macroTricks:upRight(cf + 1, 35)
 cf = input:cross(cf + 20)
+print('Puzzle 60 : ' .. (cf - fbegin))
 
 -- Picture 6
 cf = input:cross(cf + 61)
 
 -- Puzzle 61
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:right(cf + 1, 28)
@@ -1056,8 +1179,10 @@ cf = input:right(cf + 1, 20)
 cf = input:right(cf + 1, 20)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 61 : ' .. (cf - fbegin))
 
 -- Puzzle 62
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:down(cf + 1, 9)
@@ -1070,8 +1195,10 @@ cf = input:up(cf + 1, 48)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 62 : ' .. (cf - fbegin))
 
 -- Puzzle 63
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 12)
 cf = input:left(cf + 1, 39)
@@ -1098,8 +1225,10 @@ cf = input:left(cf + 1, 2)
 cf = input:up(cf + 1)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 63 : ' .. (cf - fbegin))
 
 -- Puzzle 64
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 9)
@@ -1123,8 +1252,10 @@ cf = macroTricks:upLeft(cf + 1, 30)
 cf = input:left(cf + 1, 18)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 64 : ' .. (cf - fbegin))
 
 -- Puzzle 65
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upLeft(cf + 60, 14)
 cf = input:up(cf + 1, 28)
@@ -1141,8 +1272,10 @@ cf = input:down(cf + 1, 17)
 cf = input:left(cf + 1)
 cf = input:up(cf + 1, 17)
 cf = input:cross(cf + 38)
+print('Puzzle 65 : ' .. (cf - fbegin))
 
 -- Puzzle 66
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 28)
@@ -1159,8 +1292,10 @@ cf = input:down(cf + 1)
 cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 66 : ' .. (cf - fbegin))
 
 -- Puzzle 67
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 33)
 cf = input:right(cf + 1, 10)
@@ -1178,8 +1313,10 @@ cf = input:right(cf + 1, 20)
 cf = input:up(cf + 1)
 cf = input:left(cf + 1, 17)
 cf = input:cross(cf + 21) -- frame lag
+print('Puzzle 67 : ' .. (cf - fbegin))
 
 -- Puzzle 68
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 29)
 cf = input:up(cf + 1, 9)
@@ -1210,8 +1347,10 @@ cf = input:cross(cf + 1, 10)
 cf = input:up(cf + 1, 15)
 cf = input:left(cf + 1, 76)
 cf = input:cross(cf + 20)
+print('Puzzle 68 : ' .. (cf - fbegin))
 
 -- Puzzle 69
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 9)
@@ -1231,8 +1370,10 @@ cf = input:right(cf + 1, 19)
 cf = input:right(cf + 1, 20)
 cf = input:up(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 69 : ' .. (cf - fbegin))
 
 -- Puzzle 70
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 20)
 cf = macroTricks:downRight(cf + 1, 19)
@@ -1246,11 +1387,13 @@ cf = input:right(cf + 1, 31)
 cf = input:up(cf + 1)
 cf = input:left(cf + 1, 36)
 cf = input:cross(cf + 20)
+print('Puzzle 70 : ' .. (cf - fbegin))
 
 -- Picture 7
 cf = input:cross(cf + 75) -- frame lag
 
 -- Puzzle 71
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -1264,8 +1407,10 @@ cf = input:down(cf + 1, 19)
 cf = input:left(cf + 1, 19)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 71 : ' .. (cf - fbegin))
 
 -- Puzzle 72
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 11)
 cf = input:left(cf + 1, 9)
@@ -1280,8 +1425,10 @@ cf = input:up(cf + 1)
 cf = input:right(cf + 1)
 cf = input:right(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 72 : ' .. (cf - fbegin))
 
 -- Puzzle 73
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 30)
 cf = input:up(cf + 1, 9)
@@ -1298,8 +1445,10 @@ cf = input:down(cf + 1, 19)
 cf = macroTricks:downRight(cf + 1)
 cf = input:down(cf + 1, 18)
 cf = input:cross(cf + 20)
+print('Puzzle 73 : ' .. (cf - fbegin))
 
 -- Puzzle 74
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 11)
 cf = input:right(cf + 1, 9)
@@ -1313,8 +1462,10 @@ cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1, 8)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 74 : ' .. (cf - fbegin))
 
 -- Puzzle 75
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 11)
 cf = input:up(cf + 1, 9)
@@ -1332,8 +1483,10 @@ cf = input:left(cf + 1, 19)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 27)
+print('Puzzle 75 : ' .. (cf - fbegin))
 
 -- Puzzle 76
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 11)
 cf = input:down(cf + 1, 9)
@@ -1348,8 +1501,10 @@ cf = input:right(cf + 1, 19)
 cf = input:up(cf + 1, 19)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 27)
+print('Puzzle 76 : ' .. (cf - fbegin))
 
 -- Puzzle 77
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 28)
 cf = input:left(cf + 1, 9)
@@ -1371,8 +1526,10 @@ cf = macroTricks:downLeft(cf + 1, 10)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 27)
+print('Puzzle 77 : ' .. (cf - fbegin))
 
 -- Puzzle 78
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:left(cf + 1, 9)
@@ -1392,8 +1549,10 @@ cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 78 : ' .. (cf - fbegin))
 
 -- Puzzle 79
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf + 1, 9)
@@ -1409,8 +1568,10 @@ cf = macroTricks:downRight(cf + 1, 10)
 cf = input:down(cf + 1)
 cf = input:left(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 79 : ' .. (cf - fbegin))
 
 -- Puzzle 80
+fbegin = cf
 cf = input:cross(cf + 16) -- frame lag
 cf = macroTricks:upLeft(cf + 60, 10)
 cf = input:up(cf + 1, 22)
@@ -1452,11 +1613,13 @@ cf = input:up(cf + 1)
 cf = input:down(cf + 1)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 80 : ' .. (cf - fbegin))
 
 -- Picture 8
 cf = input:cross(cf + 61)
 
 -- Puzzle 81
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -1482,8 +1645,10 @@ cf = input:up(cf + 1, 2)
 cf = input:right(cf + 1)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 81 : ' .. (cf - fbegin))
 
 -- Puzzle 82
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:left(cf + 1, 28)
@@ -1501,8 +1666,10 @@ cf = input:up(cf + 1)
 cf = input:down(cf + 1)
 cf = input:down(cf + 207)
 cf = input:cross(cf + 20)
+print('Puzzle 82 : ' .. (cf - fbegin))
 
 -- Puzzle 83
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 14)
 cf = input:down(cf + 1, 15)
@@ -1521,8 +1688,10 @@ cf = input:left(cf + 1, 17)
 cf = macroTricks:downLeft(cf + 1)
 cf = input:left(cf + 1, 59)
 cf = input:cross(cf + 20)
+print('Puzzle 83 : ' .. (cf - fbegin))
 
 -- Puzzle 84
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 29)
 cf = input:up(cf + 1, 28)
@@ -1539,8 +1708,10 @@ cf = input:down(cf + 1, 20)
 cf = input:left(cf + 1)
 cf = input:up(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 84 : ' .. (cf - fbegin))
 
 -- Puzzle 85
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 28)
 cf = input:up(cf + 1, 9)
@@ -1554,8 +1725,10 @@ cf = input:left(cf + 1, 19)
 cf = input:left(cf + 1, 20)
 cf = input:down(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 85 : ' .. (cf - fbegin))
 
 -- Puzzle 86
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 9)
 cf = input:right(cf + 1, 9)
@@ -1584,8 +1757,10 @@ cf = input:right(cf + 1, 9)
 cf = macroTricks:downRight(cf + 1, 12)
 cf = input:left(cf + 1, 2)
 cf = input:cross(cf + 20)
+print('Puzzle 86 : ' .. (cf - fbegin))
 
 -- Puzzle 87
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:down(cf + 1, 9)
@@ -1610,8 +1785,10 @@ cf = input:right(cf + 1, 2)
 cf = input:down(cf + 1, 2)
 cf = input:down(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 87 : ' .. (cf - fbegin))
 
 -- Puzzle 88
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 11)
 cf = input:left(cf + 1, 9)
@@ -1626,8 +1803,10 @@ cf = input:right(cf + 1, 20)
 cf = input:right(cf + 1, 20)
 cf = input:down(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 88 : ' .. (cf - fbegin))
 
 -- Puzzle 89
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 9)
 cf = input:right(cf + 1, 9)
@@ -1647,8 +1826,10 @@ cf = input:down(cf + 10, 38)
 cf = input:right(cf + 1, 21)
 cf = input:up(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 89 : ' .. (cf - fbegin))
 
 -- Puzzle 90
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 10)
 cf = input:up(cf + 1, 9)
@@ -1676,11 +1857,13 @@ cf = input:left(cf + 1, 19)
 cf = input:up(cf + 1)
 cf = input:right(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 90 : ' .. (cf - fbegin))
 
 -- Picture 9
 cf = input:cross(cf + 61)
 
 -- Puzzle 91
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 10)
 cf = input:right(cf + 1, 28)
@@ -1708,8 +1891,10 @@ cf = macroTricks:upLeft(cf + 1)
 cf = input:left(cf + 1, 18)
 cf = input:down(cf + 1)
 cf = input:cross(cf + 20)
+print('Puzzle 91 : ' .. (cf - fbegin))
 
 -- Puzzle 92
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:left(cf + 60, 9)
 cf = input:up(cf + 1, 9)
@@ -1729,8 +1914,10 @@ cf = input:right(cf + 1, 2)
 cf = input:down(cf + 1)
 cf = input:down(cf + 1, 20)
 cf = input:cross(cf + 20)
+print('Puzzle 92 : ' .. (cf - fbegin))
 
 -- Puzzle 93
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 14)
 cf = input:left(cf + 1, 19)
@@ -1748,8 +1935,10 @@ cf = macroTricks:upLeft(cf + 1, 26)
 cf = input:up(cf + 1, 10)
 cf = input:right(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 93 : ' .. (cf - fbegin))
 
 -- Puzzle 94
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:right(cf + 60, 10)
 cf = input:down(cf + 1, 9)
@@ -1765,8 +1954,10 @@ cf = input:up(cf + 1, 26)
 cf = input:left(cf + 1)
 cf = input:down(cf + 1, 17)
 cf = input:cross(cf + 20)
+print('Puzzle 94 : ' .. (cf - fbegin))
 
 -- Puzzle 95
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:up(cf + 60, 10)
 cf = input:left(cf + 1, 10)
@@ -1792,8 +1983,10 @@ cf = macroTricks:downLeft(cf + 1, 26)
 cf = input:down(cf + 1)
 cf = input:right(cf + 1, 19)
 cf = input:cross(cf + 20)
+print('Puzzle 95 : ' .. (cf - fbegin))
 
 -- Puzzle 96
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downRight(cf + 60, 40)
 cf = input:up(cf + 1, 96)
@@ -1810,8 +2003,10 @@ cf = macroTricks:upRight(cf + 1, 1)
 cf = input:up(cf + 1, 26)
 cf = input:left(cf + 1, 18)
 cf = input:cross(cf + 20)
+print('Puzzle 96 : ' .. (cf - fbegin))
 
 -- Puzzle 97
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downLeft(cf + 60, 13)
 cf = input:left(cf + 1, 20)
@@ -1834,8 +2029,10 @@ cf = macroTricks:upRight(cf + 1, 2)
 cf = input:up(cf + 1, 56)
 cf = input:left(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 97 : ' .. (cf - fbegin))
 
 -- Puzzle 98
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:downRight(cf + 60, 16)
 cf = input:right(cf + 1, 39)
@@ -1868,8 +2065,10 @@ cf = macroTricks:upLeft(cf + 1, 1)
 cf = input:left(cf + 1, 18)
 cf = input:down(cf + 1, 13)
 cf = input:cross(cf + 20)
+print('Puzzle 98 : ' .. (cf - fbegin))
 
 -- Puzzle 99
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = input:down(cf + 60, 3)
 cf = input:right(cf + 1, 10)
@@ -1890,8 +2089,10 @@ cf = macroTricks:downLeft(cf + 1, 55)
 cf = input:left(cf + 1, 37)
 cf = input:up(cf + 1, 17)
 cf = input:cross(cf + 38)
+print('Puzzle 99 : ' .. (cf - fbegin))
 
 -- Puzzle 100
+fbegin = cf
 cf = input:cross(cf + 3)
 cf = macroTricks:upRight(cf + 60, 8)
 cf = input:right(cf + 14, 11)
@@ -1922,5 +2123,6 @@ cf = input:left(cf + 1, 19)
 cf = input:down(cf + 1, 11)
 cf = macroTricks:downRight(cf + 1, 4)
 cf = input:up(cf + 1, 17)
+print('Puzzle 100 : ' .. (cf - fbegin))
 
 return input:all()
