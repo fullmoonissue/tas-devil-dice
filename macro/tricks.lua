@@ -70,6 +70,17 @@ function MacroTricks:downRight(frame, iterations)
     )
 end
 
+function MacroTricks:startUp(frame, iterations)
+    return self.input:add(
+            frame,
+            iterations,
+            {
+                [self.input.currentPlayer .. ' Start'] = true,
+                [self.input.currentPlayer .. ' Up'] = true,
+            }
+    )
+end
+
 function MacroTricks:merryGoOn(frame, iterations)
     local currentFrame = frame
     for i = 1, (iterations or 1) do
