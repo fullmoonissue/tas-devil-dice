@@ -1,6 +1,8 @@
-# The config.lua file have to be copied from config.lua.dist then edited
-config.lua
+# Videos and databases are .gitignored to avoid pushing them into the repository
+assets/publication/videos/*
+!assets/publication/videos/.gitkeep
+db/*
+!db/.gitkeep
 
-# Dumps are not kept
-dump/*
-!dump/.gitkeep
+# Rocks installed from make install
+lua_modules
